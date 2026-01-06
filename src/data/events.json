@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "key": "event1",
+    "highlightLabel": "Event / Training Highlight – 1",
+    "eventName": "Azure Developer Community Event – CMR College of Engineering & Technology",
+    "title": "Technical Azure community event with Microsoft speakers at CMRCET",
+    "date": "6th–7th October 2023",
+    "location": "CMR College of Engineering & Technology, Hyderabad",
+    "organizerPartner": "Reskilll & Azure Developer Community",
+    "role": "Reskill Inspirer – Hyderabad Region / Event Lead",
+    "audience": "200+ students and faculty",
+    "duration": "2 days",
+    "description": "Co-led and organized a two-day Azure-focused technical event at CMRCET featuring Microsoft employees Adithya Saladi and Krutam Hathi, focused on Azure technologies, cloud innovation, and career pathways.",
+    "keyTopics": ["Azure cloud services", "Developer practices", "Career pathways in Microsoft ecosystem"],
+    "myContribution": "Coordinated event logistics, managed registrations, coordinated with faculty, engaged with speakers, and inspired students as Reskill Inspirer for Hyderabad.",
+    "impact": [
+      "Strengthened collaboration between CMRCET and Microsoft Azure Developer Community.",
+      "Provided students with direct industry exposure and real-world insights.",
+      "Motivated participants to pursue Azure certifications and projects.",
+      "Built strong community engagement with support from faculty under the guidance of Dr. Hima Bindu (Dean of Training & Placements)."
+    ],
+    "images": [
+      "portfolio_assets/event1/image2.jpeg",
+      "portfolio_assets/event1/image3.jpeg",
+      "portfolio_assets/event1/image4.jpeg"
+    ]
+  }
+]
