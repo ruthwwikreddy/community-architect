@@ -5,7 +5,6 @@ import Experience from "@/components/Experience";
 import Stack from "@/components/Stack";
 import Projects from "@/components/Projects";
 import Events from "@/components/Events";
-import Speaking from "@/components/Speaking";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -18,7 +17,6 @@ const Index = () => {
       <Stack />
       <Projects />
       <Events />
-      <Speaking />
       <Footer />
     </main>
   );
