@@ -25,9 +25,9 @@
       "Built strong community engagement with support from faculty under the guidance of Dr. Hima Bindu (Dean of Training & Placements)."
     ],
     "images": [
-      "./portfolio_assets/event1/image2.jpeg",
-      "./portfolio_assets/event1/image3.jpeg",
-      "./portfolio_assets/event1/image4.jpeg"
+      "/portfolio_assets/event1/image2.jpeg",
+      "/portfolio_assets/event1/image3.jpeg",
+      "/portfolio_assets/event1/image4.jpeg"
     ]
   },
   {
@@ -60,9 +60,9 @@
       "Built experience in large-scale event coordination and community management."
     ],
     "images": [
-      "portfolio_assets/event2/image5.jpeg",
-      "portfolio_assets/event2/image6.jpeg",
-      "portfolio_assets/event2/image7.jpeg"
+      "/portfolio_assets/event2/image5.jpeg",
+      "/portfolio_assets/event2/image6.jpeg",
+      "/portfolio_assets/event2/image7.jpeg"
     ]
   },
   {
@@ -95,9 +95,9 @@
       "Enhanced community engagement with support from Lakshit Pant and the Azure Developer Community."
     ],
     "images": [
-      "portfolio_assets/event3/Event1_CMR_College_1.jpeg",
-      "portfolio_assets/event3/Event1_CMR_College_2.jpeg",
-      "portfolio_assets/event3/Event1_CMR_College_3.jpeg"
+      "/portfolio_assets/event3/Event1_CMR_College_1.jpeg",
+      "/portfolio_assets/event3/Event1_CMR_College_2.jpeg",
+      "/portfolio_assets/event3/Event1_CMR_College_3.jpeg"
     ]
   },
   {
@@ -119,15 +119,15 @@
     ],
     "myContribution": "Represented Azure Developer Community, actively took part in workshops, networking, and AI Odyssey Challenge, and brought learnings back to the community.",
     "impact": [
-      "Gained exclusive insights into Microsoft’s AI vision from leadership.",
+      "Gained exclusive insights into Microsoft's AI vision from leadership.",
       "Strengthened AI technical skills through real-world challenge formats.",
       "Expanded professional network with industry leaders and Microsoft experts.",
       "Enhanced ability to bring AI knowledge into community training sessions."
     ],
     "images": [
-      "portfolio_assets/event4/Event1_CMR_College_4.jpeg",
-      "portfolio_assets/event4/image12.jpeg",
-      "portfolio_assets/event4/image13.jpeg"
+      "/portfolio_assets/event4/Event1_CMR_College_4.jpeg",
+      "/portfolio_assets/event4/image12.jpeg",
+      "/portfolio_assets/event4/image13.jpeg"
     ]
   },
   {
@@ -160,9 +160,9 @@
       "Demonstrated leadership in community support and technical event coordination."
     ],
     "images": [
-      "portfolio_assets/event5/image14.jpeg",
-      "portfolio_assets/event5/image15.jpeg",
-      "portfolio_assets/event5/image16.jpeg"
+      "/portfolio_assets/event5/image14.jpeg",
+      "/portfolio_assets/event5/image15.jpeg",
+      "/portfolio_assets/event5/image16.jpeg"
     ]
   },
   {
@@ -190,10 +190,10 @@
       "Marked a personal milestone by returning as a keynote speaker."
     ],
     "images": [
-      "portfolio_assets/event6/image17.jpeg",
-      "portfolio_assets/event6/image18.jpeg",
-      "portfolio_assets/event6/image19.jpeg",
-      "portfolio_assets/event6/image20.jpeg"
+      "/portfolio_assets/event6/image17.jpeg",
+      "/portfolio_assets/event6/image18.jpeg",
+      "/portfolio_assets/event6/image19.jpeg",
+      "/portfolio_assets/event6/image20.jpeg"
     ]
   },
   {
@@ -222,7 +222,7 @@
       "Strengthened leadership profile as a regional campaign strategist and community builder."
     ],
     "images": [
-      "portfolio_assets/event7/image21.jpeg"
+      "/portfolio_assets/event7/image21.jpeg"
     ]
   },
   {
@@ -255,9 +255,9 @@
       "Reinforced collaboration between Microsoft, Deloitte, Reskilll, and ADC."
     ],
     "images": [
-      "portfolio_assets/event8/image22.jpeg",
-      "portfolio_assets/event8/image23.jpeg",
-      "portfolio_assets/event8/image24.jpeg"
+      "/portfolio_assets/event8/image22.jpeg",
+      "/portfolio_assets/event8/image23.jpeg",
+      "/portfolio_assets/event8/image24.jpeg"
     ]
   },
   {
@@ -289,9 +289,9 @@
       "Empowered participants to explore AI-powered solutions for real-world use cases."
     ],
     "images": [
-      "portfolio_assets/event9/image25.jpeg",
-      "portfolio_assets/event9/image26.jpeg",
-      "portfolio_assets/event9/image27.jpeg"
+      "/portfolio_assets/event9/image25.jpeg",
+      "/portfolio_assets/event9/image26.jpeg",
+      "/portfolio_assets/event9/image27.jpeg"
     ]
   },
   {
@@ -325,9 +325,9 @@
       "Motivated students to explore Azure certifications and AI projects."
     ],
     "images": [
-      "portfolio_assets/event10/image28.jpeg",
-      "portfolio_assets/event10/image29.jpeg",
-      "portfolio_assets/event10/image30.jpeg"
+      "/portfolio_assets/event10/image28.jpeg",
+      "/portfolio_assets/event10/image29.jpeg",
+      "/portfolio_assets/event10/image30.jpeg"
     ]
   },
   {
@@ -361,10 +361,10 @@
       "Empowered participants to adopt AI copilots in real-world workflows."
     ],
     "images": [
-      "portfolio_assets/event11/image31.jpeg",
-      "portfolio_assets/event11/image32.jpeg",
-      "portfolio_assets/event11/image33.jpeg",
-      "portfolio_assets/event11/image34.jpeg"
+      "/portfolio_assets/event11/image31.jpeg",
+      "/portfolio_assets/event11/image32.jpeg",
+      "/portfolio_assets/event11/image33.jpeg",
+      "/portfolio_assets/event11/image34.jpeg"
     ]
   },
   {
@@ -398,9 +398,9 @@
       "Supported continued learning by planning follow-up events."
     ],
     "images": [
-      "portfolio_assets/event12/image35.jpeg",
-      "portfolio_assets/event12/image36.jpeg",
-      "portfolio_assets/event12/image37.jpeg"
+      "/portfolio_assets/event12/image35.jpeg",
+      "/portfolio_assets/event12/image36.jpeg",
+      "/portfolio_assets/event12/image37.jpeg"
     ]
   },
   {
@@ -435,9 +435,9 @@
       "Enhanced skills as speaker, trainer, and mentor for student developers."
     ],
     "images": [
-      "portfolio_assets/event13/image38.jpeg",
-      "portfolio_assets/event13/image39.jpeg",
-      "portfolio_assets/event13/image40.jpeg"
+      "/portfolio_assets/event13/image38.jpeg",
+      "/portfolio_assets/event13/image39.jpeg",
+      "/portfolio_assets/event13/image40.jpeg"
     ]
   },
   {
@@ -470,10 +470,10 @@
       "Reinforced role as community speaker and mentor in student events."
     ],
     "images": [
-      "portfolio_assets/event14/image41.jpeg",
-      "portfolio_assets/event14/image42.jpeg",
-      "portfolio_assets/event14/image43.jpeg",
-      "portfolio_assets/event14/image44.jpeg"
+      "/portfolio_assets/event14/image41.jpeg",
+      "/portfolio_assets/event14/image42.jpeg",
+      "/portfolio_assets/event14/image43.jpeg",
+      "/portfolio_assets/event14/image44.jpeg"
     ]
   },
   {
@@ -506,9 +506,9 @@
       "Reinforced role as community speaker and technical mentor."
     ],
     "images": [
-      "portfolio_assets/event15/image45.jpeg",
-      "portfolio_assets/event15/image46.jpeg",
-      "portfolio_assets/event15/image47.jpeg"
+      "/portfolio_assets/event15/image45.jpeg",
+      "/portfolio_assets/event15/image46.jpeg",
+      "/portfolio_assets/event15/image47.jpeg"
     ]
   },
   {
@@ -541,9 +541,9 @@
       "Reinforced leadership as Community Lead for Azure AI-focused events."
     ],
     "images": [
-      "portfolio_assets/event16/image48.jpeg",
-      "portfolio_assets/event16/image49.jpeg",
-      "portfolio_assets/event16/image50.jpeg"
+      "/portfolio_assets/event16/image48.jpeg",
+      "/portfolio_assets/event16/image49.jpeg",
+      "/portfolio_assets/event16/image50.jpeg"
     ]
   },
   {
@@ -569,7 +569,7 @@
       "Ankita Singh",
       "Shravya Bandaru"
     ],
-    "myContribution": "Coordinated the event remotely via GRIET’s SDC-SB chapter, managed engagement, collaborated with speakers, and represented ADC and Reskilll.",
+    "myContribution": "Coordinated the event remotely via GRIET's SDC-SB chapter, managed engagement, collaborated with speakers, and represented ADC and Reskilll.",
     "impact": [
       "Showcased ability to coordinate international events virtually.",
       "Strengthened ties between GRIET, Microsoft Azure, Reskilll, and ADC.",
@@ -577,9 +577,9 @@
       "Reinforced role as global student representative and community builder."
     ],
     "images": [
-      "portfolio_assets/event17/image51.jpeg",
-      "portfolio_assets/event17/image52.jpeg",
-      "portfolio_assets/event17/image53.jpeg"
+      "/portfolio_assets/event17/image51.jpeg",
+      "/portfolio_assets/event17/image52.jpeg",
+      "/portfolio_assets/event17/image53.jpeg"
     ]
   },
   {
@@ -602,7 +602,7 @@
     "speakers": [
       "Deep Amberkar",
       "UmaRani Tejomurtula",
-      "Neil D’Cruz",
+      "Neil D'Cruz",
       "Anshuman Agarwal",
       "Venkat J"
     ],
@@ -613,9 +613,9 @@
       "Supported global developer learning around AI and Java modernization."
     ],
     "images": [
-      "portfolio_assets/event18/image54.jpeg",
-      "portfolio_assets/event18/image55.jpeg",
-      "portfolio_assets/event18/image56.jpeg"
+      "/portfolio_assets/event18/image54.jpeg",
+      "/portfolio_assets/event18/image55.jpeg",
+      "/portfolio_assets/event18/image56.jpeg"
     ]
   },
   {
@@ -649,9 +649,9 @@
       "Inspired participants to pursue AI-driven innovation and careers."
     ],
     "images": [
-      "portfolio_assets/event19/image57.jpeg",
-      "portfolio_assets/event19/image58.jpeg",
-      "portfolio_assets/event19/image59.jpeg"
+      "/portfolio_assets/event19/image57.jpeg",
+      "/portfolio_assets/event19/image58.jpeg",
+      "/portfolio_assets/event19/image59.jpeg"
     ]
   },
   {
@@ -680,9 +680,9 @@
       "Showcased leadership in organizing global virtual workshops."
     ],
     "images": [
-      "portfolio_assets/event20/image60.jpeg",
-      "portfolio_assets/event20/image61.jpeg",
-      "portfolio_assets/event20/image62.jpeg"
+      "/portfolio_assets/event20/image60.jpeg",
+      "/portfolio_assets/event20/image61.jpeg",
+      "/portfolio_assets/event20/image62.jpeg"
     ]
   },
   {
@@ -693,7 +693,7 @@
     "title": "GitHub Copilot event with TheYouthTalks initiative showcase",
     "date": "June 2025",
     "location": "Microsoft Campus, Hyderabad",
-    "organizerPartner": "Microsoft | Reskilll | Azure Developer Community | Swamy’s Tech Skills Academy | P. R. Pote Patil Group of Educational Institutes",
+    "organizerPartner": "Microsoft | Reskilll | Azure Developer Community | Swamy's Tech Skills Academy | P. R. Pote Patil Group of Educational Institutes",
     "role": "Speaker, Coordinator & Initiative Presenter",
     "audience": "200+ developers, students, and community members",
     "description": "Served as speaker and coordinator for a GitHub Copilot event that combined technical sessions with the launch and promotion of TheYouthTalks initiative for Gen Z.",
@@ -704,7 +704,7 @@
     ],
     "contributors": [
       "Shalini Singh",
-      "Viswanatha Swamy and Swamy’s Tech Skills Academy team",
+      "Viswanatha Swamy and Swamy's Tech Skills Academy team",
       "Rohit Sardana",
       "Azkar Uddin Khan",
       "Deekshith Bondhugula",
@@ -725,5 +725,3 @@
     ]
   }
 ]
-
-
