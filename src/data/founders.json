@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Marcus Chen",
+        "role": "CEO & Founder of Nexus Labs",
+        "description": "Met at the Global Tech Summit 2025. Marcus is pioneering decentralized AI infrastructure and shared incredible insights on the future of autonomous agents.",
+        "image": "/founders/founder1.png",
+        "tags": [
+            "AI",
+            "Web3",
+            "Infrastructure"
+        ],
+        "links": {
+            "linkedin": "#",
+            "twitter": "#"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Sarah Jenkins",
+        "role": "Founder of GreenPulse",
+        "description": "Sarah is building a revolutionary platform for carbon credit trading. We discussed potential collaborations on community-driven sustainability projects.",
+        "image": "/founders/founder2.png",
+        "tags": [
+            "Sustainablity",
+            "FinTech",
+            "Platform"
+        ],
+        "links": {
+            "linkedin": "#",
+            "twitter": "#"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Alex Rivera",
+        "role": "CTO of FlowState",
+        "description": "Alex is an expert in developer experience tools. Our conversation centered around the intersection of mental health and engineering productivity.",
+        "image": "/founders/founder3.png",
+        "tags": [
+            "DevTools",
+            "HealthTech",
+            "Engineering"
+        ],
+        "links": {
+            "linkedin": "#",
+            "twitter": "#"
+        }
+    }
+]

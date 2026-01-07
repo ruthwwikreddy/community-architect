@@ -4,7 +4,9 @@ import Mission from "@/components/Mission";
 import Experience from "@/components/Experience";
 import Stack from "@/components/Stack";
 import Projects from "@/components/Projects";
+import FoundersPreview from "@/components/FoundersPreview";
 import Events from "@/components/Events";
+import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -16,7 +18,9 @@ const Index = () => {
       <Experience />
       <Stack />
       <Projects />
+      <FoundersPreview />
       <Events />
+      <ContactForm />
       <Footer />
     </main>
   );

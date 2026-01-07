@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
@@ -6,28 +7,32 @@ const projects = [
     description: "Founder & Strategist. An AI & Cloud-focused consulting and community venture designed to scale developer ecosystems.",
     tags: ["Consulting", "Cloud-Focused"],
     featured: true,
-    status: null
+    status: null,
+    link: "https://technical-spaces.vercel.app/"
   },
   {
     title: "Done & Dusted",
     description: "Full-stack cleaning service booking engine. Built with React and Django REST.",
     tags: [],
     featured: false,
-    status: null
+    status: null,
+    link: "https://www.doneanddustedhertfordshire.co.uk/"
   },
   {
     title: "Cambroos",
     description: "Next.js equipment rental platform with Stripe integration.",
     tags: [],
     featured: false,
-    status: "E-Commerce"
+    status: "E-Commerce",
+    link: "https://cambroos.vercel.app/"
   },
   {
     title: "GPS Payroll",
     description: "Automated system with GPS-based attendance tracking using Django.",
     tags: [],
     featured: false,
-    status: "Automation"
+    status: "Automation",
+    link: "https://github.com/pavankumarmukkera"
   },
   {
     title: "CKC Shopify",
@@ -35,7 +40,8 @@ const projects = [
     tags: [],
     featured: false,
     status: "Audit Complete",
-    statusColor: "green"
+    statusColor: "green",
+    link: "https://linkedin.com/in/pavankumarmukkera"
   }
 ];
 
@@ -44,7 +50,7 @@ const Projects = () => {
     <section id="work" className="py-32 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -53,7 +59,7 @@ const Projects = () => {
           >
             Selected<br />Output.
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -66,46 +72,58 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <motion.div
+            <a
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className={`impact-card p-10 rounded-[3rem] flex flex-col justify-between ${
-                project.featured ? "md:col-span-2 h-[400px]" : "h-auto min-h-[250px]"
-              }`}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`block group ${project.featured ? "md:col-span-2" : ""}`}
             >
-              <div>
-                {project.featured && (
-                  <div className="text-xs mono text-indigo-500 mb-4 font-bold uppercase tracking-widest">Featured Venture</div>
-                )}
-                <h3 className={`font-black tracking-tighter ${project.featured ? "text-5xl" : "text-3xl italic"}`}>
-                  {project.title}
-                </h3>
-                <p className={`mt-4 text-zinc-400 ${project.featured ? "max-w-md" : "text-sm"}`}>
-                  {project.description}
-                </p>
-              </div>
-              
-              {project.tags.length > 0 && (
-                <div className="flex gap-4 mt-6">
-                  {project.tags.map((tag, i) => (
-                    <span key={i} className="px-4 py-2 rounded-full border border-zinc-800 text-[10px] mono uppercase">
-                      {tag}
-                    </span>
-                  ))}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`impact-card p-10 rounded-[3rem] flex flex-col justify-between h-full hover:border-indigo-500/50 transition-all ${project.featured ? "min-h-[400px]" : "min-h-[250px]"
+                  }`}
+              >
+                <div>
+                  <div className="flex justify-between items-start">
+                    {project.featured && (
+                      <div className="text-xs mono text-indigo-500 mb-4 font-bold uppercase tracking-widest">Featured Venture</div>
+                    )}
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                      <ArrowUpRight className="w-6 h-6 text-indigo-500" />
+                    </div>
+                  </div>
+                  <h3 className={`font-black tracking-tighter group-hover:text-indigo-400 transition-colors ${project.featured ? "text-5xl" : "text-3xl italic"}`}>
+                    {project.title}
+                  </h3>
+                  <p className={`mt-4 text-zinc-400 ${project.featured ? "max-w-md" : "text-sm"}`}>
+                    {project.description}
+                  </p>
                 </div>
-              )}
-              
-              {project.status && (
-                <div className={`text-[10px] mono uppercase tracking-widest font-bold mt-6 ${
-                  project.statusColor === "green" ? "text-green-500" : project.status === "E-Commerce" ? "text-indigo-500" : "text-zinc-500"
-                }`}>
-                  {project.status}
+
+                <div className="flex justify-between items-end mt-6">
+                  {project.tags.length > 0 ? (
+                    <div className="flex gap-4">
+                      {project.tags.map((tag, i) => (
+                        <span key={i} className="px-4 py-2 rounded-full border border-zinc-800 text-[10px] mono uppercase">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  ) : <div></div>}
+
+                  {project.status && (
+                    <div className={`text-[10px] mono uppercase tracking-widest font-bold ${project.statusColor === "green" ? "text-green-500" : project.status === "E-Commerce" ? "text-indigo-500" : "text-zinc-500"
+                      }`}>
+                      {project.status}
+                    </div>
+                  )}
                 </div>
-              )}
-            </motion.div>
+              </motion.div>
+            </a>
           ))}
         </div>
       </div>

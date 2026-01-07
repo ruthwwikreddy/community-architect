@@ -55,41 +55,45 @@ const Experience = () => {
 
         <div className="space-y-1">
           {experiences.map((exp, index) => (
-            <motion.a
+            <a
               key={index}
               href={exp.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className={`group py-12 border-t ${index === experiences.length - 1 ? 'border-b' : ''} border-zinc-900 grid lg:grid-cols-4 gap-8 hover:bg-zinc-900/50 transition-all px-4 rounded-xl cursor-pointer block`}
+              className="block group"
             >
-              <div className={`mono text-sm ${exp.isHighlighted ? 'text-indigo-500' : 'text-zinc-500'}`}>
-                {exp.period}
-              </div>
-              <div className="lg:col-span-2">
-                <h3 className="text-3xl font-bold mb-2">{exp.title}</h3>
-                <p className={`text-zinc-500 mono text-xs uppercase tracking-widest ${exp.isHighlighted ? 'italic' : ''}`}>
-                  {exp.company}
-                </p>
-                <ul className="mt-6 space-y-3 text-sm text-zinc-400">
-                  {exp.points.map((point, i) => (
-                    <li key={i}>
-                      • {point.includes("House of YOU") || point.includes("100+") || point.includes("Azure Logic Apps") ? (
-                        <span dangerouslySetInnerHTML={{
-                          __html: point.replace(/(House of YOU|100\+ institutions|Azure Logic Apps & Power BI)/g, '<span class="text-foreground">$1</span>')
-                        }} />
-                      ) : point}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="flex justify-end items-start opacity-0 group-hover:opacity-100 transition-opacity">
-                <ArrowUpRight className="w-12 h-12 text-indigo-500" />
-              </div>
-            </motion.a>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`py-12 border-t ${index === experiences.length - 1 ? 'border-b' : ''} border-zinc-900 grid lg:grid-cols-4 gap-8 hover:bg-zinc-900/50 transition-all px-4 rounded-xl cursor-default pointer-events-auto`}
+              >
+                <div className={`mono text-sm ${exp.isHighlighted ? 'text-indigo-500' : 'text-zinc-500'}`}>
+                  {exp.period}
+                </div>
+                <div className="lg:col-span-2">
+                  <h3 className="text-3xl font-bold mb-2 group-hover:text-indigo-400 transition-colors">{exp.title}</h3>
+                  <p className={`text-zinc-500 mono text-xs uppercase tracking-widest ${exp.isHighlighted ? 'italic' : ''}`}>
+                    {exp.company}
+                  </p>
+                  <ul className="mt-6 space-y-3 text-sm text-zinc-400">
+                    {exp.points.map((point, i) => (
+                      <li key={i}>
+                        • {point.includes("House of YOU") || point.includes("100+") || point.includes("Azure Logic Apps") ? (
+                          <span dangerouslySetInnerHTML={{
+                            __html: point.replace(/(House of YOU|100\+ institutions|Azure Logic Apps & Power BI)/g, '<span class="text-foreground">$1</span>')
+                          }} />
+                        ) : point}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="flex justify-end items-start opacity-0 group-hover:opacity-100 transition-opacity">
+                  <ArrowUpRight className="w-12 h-12 text-indigo-500" />
+                </div>
+              </motion.div>
+            </a>
           ))}
         </div>
       </div>
