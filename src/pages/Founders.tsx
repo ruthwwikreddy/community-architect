@@ -75,7 +75,7 @@ const Founders = () => {
                                         alt={founder.name}
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
                                         onError={(e) => {
-                                            (e.target as HTMLImageElement).src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+                                            (e.target as HTMLImageElement).src = "/founders/image.png";
                                         }}
                                     />
 
