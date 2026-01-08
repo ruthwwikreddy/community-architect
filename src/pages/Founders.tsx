@@ -13,6 +13,8 @@ interface Founder {
     description: string;
     image: string;
     tags: string[];
+    location?: string;
+    followers?: string;
     links: {
         linkedin?: string;
         twitter?: string;
@@ -56,7 +58,7 @@ const Founders = () => {
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {foundersData.map((founder, index) => (
+                        {foundersData.map((founder: Founder, index) => (
                             <motion.div
                                 key={founder.id}
                                 initial={{ opacity: 0, y: 20 }}
@@ -73,7 +75,7 @@ const Founders = () => {
                                         alt={founder.name}
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
                                         onError={(e) => {
-                                            (e.target as HTMLImageElement).src = `https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop`;
+                                            (e.target as HTMLImageElement).src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
                                         }}
                                     />
 
@@ -85,6 +87,16 @@ const Founders = () => {
                                             </span>
                                         ))}
                                     </div>
+
+                                    {/* Location Badge */}
+                                    {founder.location && (
+                                        <div className="absolute bottom-6 left-6 z-20">
+                                            <span className="text-[10px] mono bg-indigo-500/20 backdrop-blur-md px-3 py-1 rounded-full border border-indigo-500/30 text-white flex items-center gap-1">
+                                                <span className="w-1 h-1 bg-indigo-400 rounded-full animate-pulse" />
+                                                {founder.location}
+                                            </span>
+                                        </div>
+                                    )}
                                 </div>
 
                                 {/* Content Section */}
@@ -93,28 +105,36 @@ const Founders = () => {
                                         <h3 className="text-2xl font-black tracking-tight mb-1 group-hover:text-indigo-500 transition-colors">
                                             {founder.name}
                                         </h3>
-                                        <p className="text-xs mono text-indigo-400 font-bold uppercase tracking-widest">
+                                        <p className="text-xs mono text-indigo-400 font-bold uppercase tracking-widest mb-2">
                                             {founder.role}
                                         </p>
+                                        {founder.followers && (
+                                            <p className="text-[10px] mono text-muted-foreground uppercase tracking-widest">
+                                                Network Reach: <span className="text-foreground">{founder.followers}</span>
+                                            </p>
+                                        )}
                                     </div>
 
-                                    <p className="text-muted-foreground text-sm leading-relaxed mb-8 flex-1">
+                                    <p className="text-muted-foreground text-sm leading-relaxed mb-8 flex-1 line-clamp-4">
                                         {founder.description}
                                     </p>
 
                                     <div className="pt-6 border-t border-border/40 flex items-center justify-between">
                                         <div className="flex gap-3">
                                             {founder.links.linkedin && (
-                                                <a href={founder.links.linkedin} className="w-10 h-10 rounded-xl bg-muted/50 flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all">
+                                                <a href={founder.links.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-muted/50 flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all">
                                                     <Linkedin size={18} />
                                                 </a>
                                             )}
                                             {founder.links.twitter && (
-                                                <a href={founder.links.twitter} className="w-10 h-10 rounded-xl bg-muted/50 flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all">
+                                                <a href={founder.links.twitter} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-muted/50 flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all">
                                                     <Twitter size={18} />
                                                 </a>
                                             )}
                                         </div>
+                                        <Link to={`/founder/${founder.id}`} className="p-2 text-muted-foreground hover:text-indigo-500 transition-colors">
+                                            <ExternalLink size={18} />
+                                        </Link>
                                     </div>
                                 </div>
                             </motion.div>
@@ -122,6 +142,7 @@ const Founders = () => {
                     </div>
                 </div>
             </section>
+
 
             <Footer />
         </main>

@@ -33,7 +33,7 @@ const Navigation = () => {
     <nav className="fixed top-0 w-full z-[100] p-4 md:p-6">
       <div className="max-w-7xl mx-auto nav-glass rounded-2xl px-6 py-4 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-6">
-          <div className="font-black text-xl tracking-tighter uppercase">P. Mukkera</div>
+          <div className="font-black text-xl tracking-tighter uppercase">Pavan Mukkera</div>
           <div className="hidden md:flex items-center gap-2 text-[10px] mono text-muted-foreground border-l border-border pl-6 uppercase tracking-widest">
             <span className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></span>
             UK // <span>{time}</span>

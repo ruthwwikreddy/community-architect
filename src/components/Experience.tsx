@@ -51,54 +51,81 @@ const Experience = () => {
   return (
     <section id="experience" className="py-32 px-6">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-sm mono text-zinc-700 uppercase mb-20 tracking-widest text-center italic">Selected_Experience_Logs</h2>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="flex flex-col mb-24"
+        >
+          <h2 className="text-sm mono text-indigo-500 uppercase mb-4 tracking-[0.4em] font-bold">Trajectory_Analysis</h2>
+          <h3 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter">Experience<br />Archives.</h3>
+        </motion.div>
 
-        <div className="space-y-1">
+        <div className="space-y-0">
           {experiences.map((exp, index) => (
-            <a
+            <motion.div
               key={index}
-              href={exp.linkedinUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block group"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true, margin: "-100px" }}
             >
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`py-12 border-t ${index === experiences.length - 1 ? 'border-b' : ''} border-zinc-900 grid lg:grid-cols-4 gap-8 hover:bg-zinc-900/50 transition-all px-4 rounded-xl cursor-default pointer-events-auto`}
+              <a
+                href={exp.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block group relative"
               >
-                <div className={`mono text-sm ${exp.isHighlighted ? 'text-indigo-500' : 'text-zinc-500'}`}>
-                  {exp.period}
+                <div className={`py-16 border-t ${index === experiences.length - 1 ? 'border-b' : ''} border-border/50 grid lg:grid-cols-4 gap-12 group-hover:bg-indigo-500/5 transition-all duration-700 px-8 rounded-2xl`}>
+                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/0 via-indigo-500/0 to-indigo-500/0 group-hover:via-indigo-500/10 transition-all duration-700 pointer-events-none" />
+
+                  <div className={`mono text-xs font-bold tracking-widest ${exp.isHighlighted ? 'text-indigo-500' : 'text-zinc-500'}`}>
+                    {exp.period}
+                  </div>
+
+                  <div className="lg:col-span-2 relative z-10">
+                    <h3 className="text-3xl md:text-4xl font-bold mb-4 group-hover:text-indigo-500 transition-all duration-500 ease-out translate-x-0 group-hover:translate-x-2">
+                      {exp.title}
+                    </h3>
+                    <p className={`text-sm mono text-zinc-500 uppercase tracking-widest font-medium ${exp.isHighlighted ? 'text-indigo-400' : ''}`}>
+                      {exp.company}
+                    </p>
+
+                    <div className="mt-8 space-y-4 overflow-hidden">
+                      {exp.points.map((point, i) => (
+                        <motion.div
+                          key={i}
+                          initial={{ opacity: 0, x: -10 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ delay: 0.2 + (i * 0.1) }}
+                          className="flex items-start gap-3 text-base text-muted-foreground leading-relaxed"
+                        >
+                          <span className="w-1.5 h-1.5 rounded-full bg-indigo-500/30 mt-2 flex-shrink-0" />
+                          {point.includes("House of YOU") || point.includes("100+") || point.includes("Azure Logic Apps") ? (
+                            <span dangerouslySetInnerHTML={{
+                              __html: point.replace(/(House of YOU|100\+ institutions|Azure Logic Apps & Power BI)/g, '<span class="text-foreground font-semibold">$1</span>')
+                            }} />
+                          ) : point}
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex justify-end items-start pt-2">
+                    <div className="w-16 h-16 rounded-full border border-border group-hover:border-indigo-500 group-hover:bg-indigo-500 group-hover:text-white transition-all duration-500 flex items-center justify-center rotate-45 group-hover:rotate-0">
+                      <ArrowUpRight size={24} />
+                    </div>
+                  </div>
                 </div>
-                <div className="lg:col-span-2">
-                  <h3 className="text-3xl font-bold mb-2 group-hover:text-indigo-400 transition-colors">{exp.title}</h3>
-                  <p className={`text-zinc-500 mono text-xs uppercase tracking-widest ${exp.isHighlighted ? 'italic' : ''}`}>
-                    {exp.company}
-                  </p>
-                  <ul className="mt-6 space-y-3 text-sm text-zinc-400">
-                    {exp.points.map((point, i) => (
-                      <li key={i}>
-                        • {point.includes("House of YOU") || point.includes("100+") || point.includes("Azure Logic Apps") ? (
-                          <span dangerouslySetInnerHTML={{
-                            __html: point.replace(/(House of YOU|100\+ institutions|Azure Logic Apps & Power BI)/g, '<span class="text-foreground">$1</span>')
-                          }} />
-                        ) : point}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="flex justify-end items-start opacity-0 group-hover:opacity-100 transition-opacity">
-                  <ArrowUpRight className="w-12 h-12 text-indigo-500" />
-                </div>
-              </motion.div>
-            </a>
+              </a>
+            </motion.div>
           ))}
         </div>
       </div>
     </section>
   );
 };
+
 
 export default Experience;

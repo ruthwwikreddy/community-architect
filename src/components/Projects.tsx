@@ -47,88 +47,99 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="work" className="py-32 px-6">
+    <section id="work" className="py-40 px-6 relative">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+        <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-12">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-6xl md:text-8xl font-black tracking-tighter uppercase italic"
           >
-            Selected<br />Output.
-          </motion.h2>
+            <h2 className="text-sm mono text-indigo-500 uppercase mb-4 tracking-[0.4em] font-bold">Selected_Output</h2>
+            <h3 className="text-6xl md:text-8xl font-black tracking-tighter uppercase italic leading-[0.8]">
+              Selected<br />Projects.
+            </h3>
+          </motion.div>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="max-w-xs text-zinc-500 text-sm mono leading-relaxed"
+            className="max-w-sm text-muted-foreground text-lg font-medium leading-relaxed"
           >
-            A collection of full-stack platforms and community-driven ventures focusing on AI and digital utility.
+            A curated archive of full-stack platforms, community ventures, and AI-driven innovations focusing on digital utility and collective impact.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <a
+            <motion.div
               key={index}
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`block group ${project.featured ? "md:col-span-2" : ""}`}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true }}
+              className={`${project.featured ? "md:col-span-2" : ""}`}
             >
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`impact-card p-10 rounded-[3rem] flex flex-col justify-between h-full hover:border-indigo-500/50 transition-all ${project.featured ? "min-h-[400px]" : "min-h-[250px]"
-                  }`}
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block group h-full"
               >
-                <div>
-                  <div className="flex justify-between items-start">
-                    {project.featured && (
-                      <div className="text-xs mono text-indigo-500 mb-4 font-bold uppercase tracking-widest">Featured Venture</div>
-                    )}
-                    <div className="opacity-0 group-hover:opacity-100 transition-opacity">
-                      <ArrowUpRight className="w-6 h-6 text-indigo-500" />
+                <div className="impact-card p-10 md:p-12 rounded-[3.5rem] flex flex-col justify-between h-full relative overflow-hidden">
+                  <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-4 group-hover:translate-x-0">
+                    <div className="w-14 h-14 rounded-2xl bg-indigo-500 text-white flex items-center justify-center -rotate-45 group-hover:rotate-0 transition-transform duration-500">
+                      <ArrowUpRight size={24} />
                     </div>
                   </div>
-                  <h3 className={`font-black tracking-tighter group-hover:text-indigo-400 transition-colors ${project.featured ? "text-5xl" : "text-3xl italic"}`}>
-                    {project.title}
-                  </h3>
-                  <p className={`mt-4 text-zinc-400 ${project.featured ? "max-w-md" : "text-sm"}`}>
-                    {project.description}
-                  </p>
-                </div>
 
-                <div className="flex justify-between items-end mt-6">
-                  {project.tags.length > 0 ? (
-                    <div className="flex gap-4">
+                  <div>
+                    {project.featured && (
+                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-500 text-[10px] mono font-bold uppercase tracking-widest mb-8">
+                        Featured Venture
+                      </div>
+                    )}
+
+                    <h3 className={`font-black tracking-tighter group-hover:text-indigo-500 transition-colors duration-500 mb-6 ${project.featured ? "text-5xl md:text-7xl leading-[0.9]" : "text-4xl italic leading-[1]"}`}>
+                      {project.title}
+                    </h3>
+
+                    <p className={`text-muted-foreground font-medium leading-relaxed ${project.featured ? "max-w-xl text-xl" : "text-base"}`}>
+                      {project.description}
+                    </p>
+                  </div>
+
+                  <div className="mt-12 flex flex-wrap items-center justify-between gap-6">
+                    <div className="flex flex-wrap gap-3">
                       {project.tags.map((tag, i) => (
-                        <span key={i} className="px-4 py-2 rounded-full border border-zinc-800 text-[10px] mono uppercase">
+                        <span key={i} className="px-5 py-2 rounded-full border border-border bg-muted/30 text-[10px] mono uppercase font-bold tracking-widest group-hover:border-indigo-500/30 transition-colors">
                           {tag}
                         </span>
                       ))}
                     </div>
-                  ) : <div></div>}
 
-                  {project.status && (
-                    <div className={`text-[10px] mono uppercase tracking-widest font-bold ${project.statusColor === "green" ? "text-green-500" : project.status === "E-Commerce" ? "text-indigo-500" : "text-zinc-500"
-                      }`}>
-                      {project.status}
-                    </div>
-                  )}
+                    {project.status && (
+                      <div className={`text-[10px] mono uppercase tracking-[0.2em] font-black flex items-center gap-2 ${project.statusColor === "green" ? "text-green-500" : "text-indigo-500"
+                        }`}>
+                        <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" />
+                        {project.status}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Subtle Hover Decoration */}
+                  <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-indigo-500/5 blur-[80px] rounded-full group-hover:bg-indigo-500/10 transition-colors duration-700" />
                 </div>
-              </motion.div>
-            </a>
+              </a>
+            </motion.div>
           ))}
         </div>
       </div>
     </section>
   );
 };
+
 
 export default Projects;

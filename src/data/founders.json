@@ -1,49 +1,145 @@
 [
     {
         "id": 1,
-        "name": "Marcus Chen",
-        "role": "CEO & Founder of Nexus Labs",
-        "description": "Met at the Global Tech Summit 2025. Marcus is pioneering decentralized AI infrastructure and shared incredible insights on the future of autonomous agents.",
-        "image": "/founders/founder1.png",
+        "name": "Rohit Sardana",
+        "role": "Founder, Reskilll & TheYouthTalks",
+        "description": "Inspiring entrepreneur and community builder. As the Founder of Reskilll, he created one of the fastest-growing learning ecosystems. Collaborated on Azure Developer Day and community employability programs across India and the UK.",
+        "image": "/founders/rohit.png",
         "tags": [
-            "AI",
-            "Web3",
-            "Infrastructure"
+            "Community",
+            "EdTech",
+            "Leadership"
         ],
+        "location": "Delhi, India",
+        "followers": "22,000+",
         "links": {
-            "linkedin": "#",
+            "linkedin": "https://linkedin.com/in/rohitsardana",
             "twitter": "#"
         }
     },
     {
         "id": 2,
-        "name": "Sarah Jenkins",
-        "role": "Founder of GreenPulse",
-        "description": "Sarah is building a revolutionary platform for carbon credit trading. We discussed potential collaborations on community-driven sustainability projects.",
-        "image": "/founders/founder2.png",
+        "name": "Kalyan Jata",
+        "role": "Founder & CEO, PossoBuild",
+        "description": "Visionary leader with 20+ years at Microsoft and GE. Building AI-driven hiring and training platforms like SmartHire and SmartPrep, empowering industries through unbiased multilingual assessment tools.",
+        "image": "/founders/kalyan.png",
         "tags": [
-            "Sustainablity",
-            "FinTech",
-            "Platform"
+            "AI",
+            "Digital Transformation",
+            "SaaS"
         ],
+        "location": "Hyderabad, India",
+        "followers": "2,600+",
         "links": {
-            "linkedin": "#",
+            "linkedin": "https://linkedin.com/in/kalyanjata",
             "twitter": "#"
         }
     },
     {
         "id": 3,
-        "name": "Alex Rivera",
-        "role": "CTO of FlowState",
-        "description": "Alex is an expert in developer experience tools. Our conversation centered around the intersection of mental health and engineering productivity.",
-        "image": "/founders/founder3.png",
+        "name": "Lavanya Gamsani",
+        "role": "Franchise Director, Subway & Radfield Home Care",
+        "description": "Dynamic entrepreneur managing multiple franchises in the UK. Expert in business audits, franchise operations, and local community engagement, transitioning from tech to high-impact local leadership.",
+        "image": "/founders/lavanya.png",
         "tags": [
-            "DevTools",
-            "HealthTech",
-            "Engineering"
+            "Operations",
+            "Leadership",
+            "Healthcare"
         ],
+        "location": "Watford, UK",
+        "followers": "3,000+",
         "links": {
-            "linkedin": "#",
+            "linkedin": "https://linkedin.com/in/lavanyagamsani",
+            "twitter": "#"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Aditya Ramana",
+        "role": "Business Head, App Y Systems Inc.",
+        "description": "Strategic leader with 14+ years in IT delivery and digital transformation. Scaled App Y Systems in cloud and DevOps. Mentored me in client relations, recruitment strategy, and global delivery management.",
+        "image": "/founders/aditya.png",
+        "tags": [
+            "Strategy",
+            "Cloud",
+            "Operations"
+        ],
+        "location": "Texas, USA",
+        "followers": "4,300+",
+        "links": {
+            "linkedin": "https://linkedin.com/in/adityaramana",
+            "twitter": "#"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Gopal Mekala",
+        "role": "CEO & Co-Founder, Cloud AI Tech",
+        "description": "Cybersecurity visionary with 20+ years in enterprise IT and cloud architecture. Leads AI OpenSec Labs and LSA Recruit. Collaborated on ethical AI, penetration testing, and business resilience projects.",
+        "image": "/founders/gopal.png",
+        "tags": [
+            "Cybersecurity",
+            "AI",
+            "Cloud"
+        ],
+        "location": "London, UK",
+        "followers": "34,000+",
+        "links": {
+            "linkedin": "https://linkedin.com/in/gopalmekala",
+            "twitter": "#"
+        }
+    },
+    {
+        "id": 6,
+        "name": "Cha’Von (CJ) Clarke-Joell",
+        "role": "Founder, CKC Cares Ventures Ltd",
+        "description": "Thought leader in AI ethics and human-centered governance. Developer of the Human Scaffolding System. We collaborated on AI First Aid and E-AMP Leadership Series to create ethical AI ecosystems.",
+        "image": "/founders/cj.png",
+        "tags": [
+            "AI Ethics",
+            "Governance",
+            "Strategy"
+        ],
+        "location": "London, UK",
+        "followers": "3,400+",
+        "links": {
+            "linkedin": "https://linkedin.com/in/chavonclarkejoell",
+            "twitter": "#"
+        }
+    },
+    {
+        "id": 7,
+        "name": "Bal Heer",
+        "role": "CEO, Regional Homes | Founder, Local Hero Awards",
+        "description": "Multi-award-winning entrepreneur and property leader. Founder of the Local Hero Awards, a national platform honoring everyday heroes. Expert in event coordination and community-driven social impact.",
+        "image": "/founders/balherr.png",
+        "tags": [
+            "Events",
+            "Social Impact",
+            "Real Estate"
+        ],
+        "location": "Birmingham, UK",
+        "followers": "3,500+",
+        "links": {
+            "linkedin": "https://linkedin.com/in/balheer",
+            "twitter": "#"
+        }
+    },
+    {
+        "id": 8,
+        "name": "Richard F. Bossman Kunedu",
+        "role": "Operations & Administrative Support",
+        "description": "Business professional focused on operations and administrative workflows. Ensuring smooth coordination between teams, documentation handling, and strategic operational planning for growing ventures.",
+        "image": "/founders/richard.png",
+        "tags": [
+            "Operations",
+            "Admin",
+            "Planning"
+        ],
+        "location": "United Kingdom",
+        "followers": "N/A",
+        "links": {
+            "linkedin": "https://linkedin.com/in/richardkunedu",
             "twitter": "#"
         }
     }

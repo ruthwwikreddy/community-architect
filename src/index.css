@@ -94,18 +94,30 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
   * {
     @apply border-border;
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground antialiased selection:bg-indigo-500/30;
     font-family: 'Outfit', sans-serif;
+    cursor: none;
+  }
+
+  a,
+  button,
+  [role="button"] {
+    cursor: none;
   }
 
   /* Custom scrollbar */
   ::-webkit-scrollbar {
-    width: 5px;
+    width: 6px;
   }
 
   ::-webkit-scrollbar-track {
@@ -123,6 +135,17 @@
   }
 }
 
+@layer components {
+  .cursor-follower {
+    @apply fixed top-0 left-0 w-8 h-8 rounded-full border border-indigo-500/50 pointer-events-none z-[999] transition-transform duration-300 ease-out;
+    mix-blend-mode: difference;
+  }
+
+  .cursor-dot {
+    @apply fixed top-0 left-0 w-1 h-1 bg-indigo-500 rounded-full pointer-events-none z-[1000];
+  }
+}
+
 @layer utilities {
   .mono {
     font-family: 'JetBrains Mono', monospace;
@@ -131,7 +154,7 @@
   .nav-glass {
     background: hsl(var(--background) / 0.7);
     backdrop-filter: saturate(180%) blur(20px);
-    border: 1px solid hsl(var(--border));
+    border: 1px solid hsl(var(--border) / 0.5);
   }
 
   .dark .nav-glass {
@@ -140,15 +163,16 @@
   }
 
   .kinetic-title {
-    font-size: clamp(3rem, 12vw, 12rem);
-    line-height: 0.85;
-    letter-spacing: -0.05em;
+    font-size: clamp(3.5rem, 15vw, 14rem);
+    line-height: 0.8;
+    letter-spacing: -0.06em;
+    font-weight: 900;
   }
 
   .impact-card {
     background: linear-gradient(145deg, hsl(var(--muted) / 0.5) 0%, hsl(var(--muted) / 0.2) 100%);
     border: 1px solid hsl(var(--border));
-    transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .dark .impact-card {
@@ -157,41 +181,39 @@
   }
 
   .impact-card:hover {
-    border-color: hsl(var(--indigo-500));
-    background: hsl(var(--indigo-600) / 0.05);
-    transform: scale(1.02);
+    border-color: hsl(var(--indigo-500) / 0.5);
+    background: hsl(var(--indigo-600) / 0.03);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px -20px hsl(var(--indigo-500) / 0.3);
   }
 
   .text-stroke {
-    -webkit-text-stroke: 1px hsl(var(--muted-foreground));
-    color: hsl(var(--muted));
+    -webkit-text-stroke: 1.5px hsl(var(--foreground));
+    color: transparent;
+    opacity: 0.3;
   }
 
   .dark .text-stroke {
-    -webkit-text-stroke: 1px hsl(0 0% 100% / 0.2);
-    color: hsl(var(--zinc-800));
+    -webkit-text-stroke: 1.5px hsl(var(--foreground));
+    color: transparent;
+    opacity: 0.15;
   }
 
   .blur-glow {
-    filter: blur(180px);
+    filter: blur(140px);
+    animation: pulse-glow 10s infinite alternate;
   }
 
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
+  @keyframes pulse-glow {
+    0% {
+      opacity: 0.2;
+      transform: scale(1);
+    }
 
-  .line-clamp-3 {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .touch-pan {
-    touch-action: pan-y;
+    100% {
+      opacity: 0.4;
+      transform: scale(1.2);
+    }
   }
 
   .custom-scrollbar::-webkit-scrollbar {
