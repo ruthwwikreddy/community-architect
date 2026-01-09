@@ -106,13 +106,16 @@
   body {
     @apply bg-background text-foreground antialiased selection:bg-indigo-500/30;
     font-family: 'Outfit', sans-serif;
-    cursor: none;
   }
 
-  a,
-  button,
-  [role="button"] {
-    cursor: none;
+  @media (hover: hover) and (pointer: fine) {
+
+    body,
+    a,
+    button,
+    [role="button"] {
+      cursor: none;
+    }
   }
 
   /* Custom scrollbar */

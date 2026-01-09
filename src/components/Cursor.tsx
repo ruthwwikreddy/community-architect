@@ -4,12 +4,22 @@ import { motion, useSpring } from "framer-motion";
 const Cursor = () => {
     const [isHovered, setIsHovered] = useState(false);
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+    const [isDesktop, setIsDesktop] = useState(false);
 
     const springConfig = { damping: 25, stiffness: 150 };
     const cursorX = useSpring(0, springConfig);
     const cursorY = useSpring(0, springConfig);
 
     useEffect(() => {
+        const mediaQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
+        setIsDesktop(mediaQuery.matches);
+
+        const handleMediaChange = (e: MediaQueryListEvent) => {
+            setIsDesktop(e.matches);
+        };
+
+        mediaQuery.addEventListener("change", handleMediaChange);
+
         const moveMouse = (e: MouseEvent) => {
             setMousePos({ x: e.clientX, y: e.clientY });
             cursorX.set(e.clientX - 16);
@@ -26,10 +36,13 @@ const Cursor = () => {
         window.addEventListener("mouseover", handleHover);
 
         return () => {
+            mediaQuery.removeEventListener("change", handleMediaChange);
             window.removeEventListener("mousemove", moveMouse);
             window.removeEventListener("mouseover", handleHover);
         };
     }, []);
+
+    if (!isDesktop) return null;
 
     return (
         <>
