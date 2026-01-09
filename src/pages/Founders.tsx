@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Linkedin, Twitter, ExternalLink, Sparkles, User, ArrowLeft } from "lucide-react";
+import { Linkedin, Sparkles, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import foundersData from "@/data/founders.json";
 import Navigation from "@/components/Navigation";
@@ -119,22 +119,14 @@ const Founders = () => {
                                         {founder.description}
                                     </p>
 
-                                    <div className="pt-6 border-t border-border/40 flex items-center justify-between">
+                                    <div className="pt-6 border-t border-border/40">
                                         <div className="flex gap-3">
                                             {founder.links.linkedin && (
                                                 <a href={founder.links.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-muted/50 flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all">
                                                     <Linkedin size={18} />
                                                 </a>
                                             )}
-                                            {founder.links.twitter && (
-                                                <a href={founder.links.twitter} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-muted/50 flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all">
-                                                    <Twitter size={18} />
-                                                </a>
-                                            )}
                                         </div>
-                                        <Link to={`/founder/${founder.id}`} className="p-2 text-muted-foreground hover:text-indigo-500 transition-colors">
-                                            <ExternalLink size={18} />
-                                        </Link>
                                     </div>
                                 </div>
                             </motion.div>

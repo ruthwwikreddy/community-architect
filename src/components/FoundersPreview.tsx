@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Linkedin, Twitter, ExternalLink, Sparkles, ArrowRight } from "lucide-react";
+import { Linkedin, ExternalLink, Sparkles, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import foundersData from "@/data/founders.json";
 
