@@ -28,7 +28,11 @@ const CATEGORIES = ["All", "Azure", "AI & Copilot", "Community", "Workshops"];
 
 const normalizePath = (path: string) => {
   if (!path) return "";
-  // Remove leading ./ or public/
+  // If it already starts with a slash, assume it's correct
+  if (path.startsWith("/")) return path;
+  // Handle paths starting with portfolio_assets
+  if (path.startsWith("portfolio_assets")) return "/" + path;
+  // Fallback: remove leading ./ or public/
   let normalized = path.replace(/^(\.\/|public\/)/, "/");
   if (!normalized.startsWith("/")) normalized = "/" + normalized;
   return normalized;
@@ -135,7 +139,7 @@ const Events = () => {
             <h2 className="text-sm mono text-indigo-500 uppercase mb-4 tracking-[0.3em] flex items-center gap-2">
               <Sparkles size={14} /> Events & Impact
             </h2>
-            <h3 className="text-6xl md:text-8xl font-black tracking-tighter uppercase italic leading-[0.85]">
+            <h3 className="text-5xl md:text-8xl font-black tracking-tighter uppercase italic leading-[0.85]">
               Public<br />Appearances.
             </h3>
           </motion.div>
@@ -201,12 +205,12 @@ const Events = () => {
               >
                 {/* Image Background Layer */}
                 <div className="absolute inset-0 z-0">
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-background/20 z-10" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/95 to-background/40 z-10" />
                   {event.images && event.images[0] ? (
                     <img
                       src={normalizePath(event.images[0])}
                       alt=""
-                      className="w-full h-full object-cover grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-50 group-hover:scale-110 transition-all duration-700"
+                      className="w-full h-full object-cover grayscale opacity-20 sm:opacity-30 group-hover:grayscale-0 group-hover:opacity-50 group-hover:scale-110 transition-all duration-700"
                       onError={(e) => {
                         (e.target as HTMLImageElement).src = `https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop`;
                       }}
@@ -226,10 +230,10 @@ const Events = () => {
                         </span>
                       </div>
                     </div>
-                    <h4 className="text-3xl font-black mb-6 leading-[1.1] tracking-tight group-hover:text-indigo-400 transition-colors">
+                    <h4 className="text-2xl md:text-3xl font-black mb-4 md:6 leading-[1.1] tracking-tight group-hover:text-indigo-400 transition-colors">
                       {event.eventName}
                     </h4>
-                    <p className="text-sm text-muted-foreground line-clamp-4 leading-relaxed font-medium opacity-80 group-hover:opacity-100 transition-opacity">
+                    <p className="text-xs md:text-sm text-muted-foreground line-clamp-3 md:line-clamp-4 leading-relaxed font-medium opacity-80 group-hover:opacity-100 transition-opacity">
                       {event.description}
                     </p>
                   </div>
@@ -300,11 +304,11 @@ const Events = () => {
                     <div className="text-[10px] mono text-muted-foreground/60 uppercase mb-4 flex justify-between items-center shrink-0 tracking-widest">
                       <span className="flex items-center gap-2">
                         <Clock size={10} className="text-indigo-500" />
-                        Live Multi-Angle Feed
+                        Gallery
                       </span>
                       <span className="text-indigo-400/80 animate-pulse flex items-center gap-1">
                         <div className="w-1 h-1 rounded-full bg-indigo-400" />
-                        Auto-Cycle
+                        Live Multi-Angle Feed
                       </span>
                     </div>
 
@@ -324,13 +328,13 @@ const Events = () => {
                   </div>
 
                   <div className="mt-auto pt-6 border-t border-white/5 grid grid-cols-2 gap-4 shrink-0 relative z-10">
-                    <div className="bg-white/5 p-4 rounded-2xl border border-white/5">
-                      <div className="text-[9px] mono text-muted-foreground uppercase mb-1 tracking-wider">Designation</div>
-                      <div className="text-xs font-black text-indigo-400 leading-tight uppercase tracking-tighter">{selectedEvent.role}</div>
+                    <div className="bg-white/5 p-3 md:p-4 rounded-2xl border border-white/5">
+                      <div className="text-[8px] md:text-[9px] mono text-muted-foreground uppercase mb-1 tracking-wider">Designation</div>
+                      <div className="text-[10px] md:text-xs font-black text-indigo-400 leading-tight uppercase tracking-tighter">{selectedEvent.role}</div>
                     </div>
-                    <div className="bg-white/5 p-4 rounded-2xl border border-white/5">
-                      <div className="text-[9px] mono text-muted-foreground uppercase mb-1 tracking-wider">Event Partner</div>
-                      <div className="text-xs font-black text-white/90 leading-tight uppercase tracking-tighter truncate">{selectedEvent.organizerPartner}</div>
+                    <div className="bg-white/5 p-3 md:p-4 rounded-2xl border border-white/5">
+                      <div className="text-[8px] md:text-[9px] mono text-muted-foreground uppercase mb-1 tracking-wider">Event Partner</div>
+                      <div className="text-[10px] md:text-xs font-black text-white/90 leading-tight uppercase tracking-tighter truncate">{selectedEvent.organizerPartner}</div>
                     </div>
                   </div>
                 </div>
