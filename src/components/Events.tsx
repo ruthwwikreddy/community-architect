@@ -24,7 +24,46 @@ interface Event {
   speakers?: string[];
 }
 
-const CATEGORIES = ["All", "Azure", "AI & Copilot", "Community", "Workshops"];
+const CATEGORIES = ["All", "Public Speaking", "Webinars", "Workshops", "Community Events", "Training"];
+
+// Helper function to parse dates from various formats
+const parseEventDate = (dateStr: string): Date => {
+  // Handle various date formats in the events data
+  // Examples: "6th–7th October 2023", "November 2023", "2024", "13th March 2024", "04/04/2025", "21st February 2025"
+
+  // Try to extract year first
+  const yearMatch = dateStr.match(/(\d{4})/);
+  if (!yearMatch) return new Date(0); // Invalid date, put at the end
+
+  const year = parseInt(yearMatch[1]);
+
+  // Try to extract month
+  const monthNames = ['january', 'february', 'march', 'april', 'may', 'june',
+    'july', 'august', 'september', 'october', 'november', 'december'];
+  const lowerDate = dateStr.toLowerCase();
+  let month = 0;
+
+  for (let i = 0; i < monthNames.length; i++) {
+    if (lowerDate.includes(monthNames[i])) {
+      month = i;
+      break;
+    }
+  }
+
+  // Try to extract day (look for numbers followed by st, nd, rd, th)
+  const dayMatch = dateStr.match(/(\d{1,2})(st|nd|rd|th)/);
+  const day = dayMatch ? parseInt(dayMatch[1]) : 1;
+
+  // Handle date format like "04/04/2025"
+  if (dateStr.includes('/')) {
+    const parts = dateStr.split('/');
+    if (parts.length === 3) {
+      return new Date(parseInt(parts[2]), parseInt(parts[1]) - 1, parseInt(parts[0]));
+    }
+  }
+
+  return new Date(year, month, day);
+};
 
 const normalizePath = (path: string) => {
   if (!path) return "";
@@ -108,19 +147,26 @@ const Events = () => {
       ].join(" ").toLowerCase();
 
       switch (activeFilter) {
-        case "Azure":
-          return searchString.includes("azure") || searchString.includes("microsoft cloud");
-        case "AI & Copilot":
-          return searchString.includes("ai") || searchString.includes("copilot") || searchString.includes("generative") || searchString.includes("openai") || searchString.includes("intelligence");
-        case "Community":
-          return searchString.includes("community") || searchString.includes("lead") || searchString.includes("ambassador") || searchString.includes("representative") || searchString.includes("inspirer");
+        case "Public Speaking":
+          return searchString.includes("speaker") || searchString.includes("keynote") || searchString.includes("presentation");
+        case "Webinars":
+          return searchString.includes("webinar") || searchString.includes("online") || searchString.includes("virtual");
         case "Workshops":
           return searchString.includes("workshop") || searchString.includes("training") || searchString.includes("camp") || searchString.includes("roadshow") || searchString.includes("fest") || searchString.includes("tour");
+        case "Community Events":
+          return searchString.includes("community") || searchString.includes("mixer") || searchString.includes("day") || searchString.includes("event");
+        case "Training":
+          return searchString.includes("training") || searchString.includes("skills") || searchString.includes("dev camp") || searchString.includes("workshop");
         default:
           return true;
       }
     })
-    .sort((a, b) => a.id - b.id); // Sorted 1 to 21
+    .sort((a, b) => {
+      // Sort by date - most recent first
+      const dateA = parseEventDate(a.date);
+      const dateB = parseEventDate(b.date);
+      return dateB.getTime() - dateA.getTime();
+    });
 
   return (
     <section id="events" className="py-32 px-6 relative overflow-hidden">
@@ -151,11 +197,11 @@ const Events = () => {
             className="flex items-center gap-6 relative"
           >
             <div className="text-8xl font-black text-indigo-500/10 absolute -right-4 -top-8 select-none">
-              {eventsData.length}
+              {filteredEvents.length}
             </div>
             <div className="relative">
-              <div className="text-7xl font-black text-indigo-500 leading-none">
-                {eventsData.length}
+              <div className="text-7xl font-black text-indigo-500 leading-none transition-all duration-300">
+                {filteredEvents.length}
               </div>
               <div className="text-xs mono text-muted-foreground uppercase tracking-widest leading-tight mt-1">
                 Global Impact<br />Milestones
@@ -223,10 +269,15 @@ const Events = () => {
                 <div className="relative z-20 p-10 h-full flex flex-col justify-between">
                   <div>
                     <div className="flex justify-between items-start mb-8">
-                      <div className="flex items-center gap-3">
-                        <span className="text-[10px] mono text-indigo-500 font-black opacity-40">#{index + 1}</span>
+                      <div className="flex items-center gap-4">
+                        <div className="relative">
+                          <span className="text-6xl md:text-7xl font-black bg-gradient-to-br from-indigo-500 via-indigo-400 to-indigo-600 bg-clip-text text-transparent leading-none opacity-90 group-hover:opacity-100 transition-opacity">
+                            {String(index + 1).padStart(2, '0')}
+                          </span>
+                          <div className="absolute -bottom-1 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 to-transparent rounded-full opacity-60" />
+                        </div>
                         <span className="text-[10px] mono text-indigo-400 font-bold uppercase tracking-[0.2em] bg-indigo-500/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-indigo-500/20">
-                          {event.highlightLabel.split(" – ")[1] || event.highlightLabel}
+                          Event Highlight
                         </span>
                       </div>
                     </div>
@@ -327,14 +378,14 @@ const Events = () => {
                     </div>
                   </div>
 
-                  <div className="mt-auto pt-6 border-t border-white/5 grid grid-cols-2 gap-4 shrink-0 relative z-10">
+                  <div className="mt-auto pt-6 border-t border-white/5 flex flex-col gap-4 shrink-0 relative z-10">
                     <div className="bg-white/5 p-3 md:p-4 rounded-2xl border border-white/5">
-                      <div className="text-[8px] md:text-[9px] mono text-muted-foreground uppercase mb-1 tracking-wider">Designation</div>
-                      <div className="text-[10px] md:text-xs font-black text-indigo-400 leading-tight uppercase tracking-tighter">{selectedEvent.role}</div>
+                      <div className="text-[8px] md:text-[9px] mono text-muted-foreground mb-1 tracking-wider">Designation</div>
+                      <div className="text-[10px] md:text-xs font-black text-indigo-400 leading-tight tracking-tighter">{selectedEvent.role}</div>
                     </div>
                     <div className="bg-white/5 p-3 md:p-4 rounded-2xl border border-white/5">
-                      <div className="text-[8px] md:text-[9px] mono text-muted-foreground uppercase mb-1 tracking-wider">Event Partner</div>
-                      <div className="text-[10px] md:text-xs font-black text-white/90 leading-tight uppercase tracking-tighter truncate">{selectedEvent.organizerPartner}</div>
+                      <div className="text-[8px] md:text-[9px] mono text-muted-foreground mb-2 tracking-wider">Event Partners</div>
+                      <div className="text-[10px] md:text-xs font-black text-white/90 leading-relaxed tracking-tight">{selectedEvent.organizerPartner}</div>
                     </div>
                   </div>
                 </div>

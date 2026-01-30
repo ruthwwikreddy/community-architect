@@ -26,6 +26,7 @@ const Navigation = () => {
       <a href={isHome ? "#work" : "/#work"} className="hover:text-foreground transition-colors">Work</a>
       <a href={isHome ? "#founders-preview" : "/founders"} className="hover:text-foreground transition-colors">Founders</a>
       <a href={isHome ? "#events" : "/#events"} className="hover:text-foreground transition-colors">Events</a>
+      <a href={isHome ? "#recommendations" : "/#recommendations"} className="hover:text-foreground transition-colors">Recommendations</a>
     </>
   );
 

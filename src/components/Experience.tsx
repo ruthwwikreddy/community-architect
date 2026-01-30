@@ -3,46 +3,124 @@ import { ArrowUpRight } from "lucide-react";
 
 const experiences = [
   {
-    period: "2025 // APR — JUN",
-    title: "Technical Strategy & Engagement",
-    company: "CKC Cares Ventures Ltd | London, UK",
+    period: "2025 // SEP — 2026 // JAN",
+    title: "Community Manager",
+    company: "TheYouthTalks | Remote | Freelance",
     isHighlighted: true,
     linkedinUrl: "https://linkedin.com/in/pavankumarmukkera",
     points: [
-      "Optimizing House of YOU via UX audits & content structuring.",
-      "Architecting AI First Aid workshops & Shopify performance logic."
+      "Empowering youth voices through tech-driven discussions and digital outreach.",
+      "Developing global initiatives to strengthen community participation and visibility."
     ]
   },
   {
-    period: "2023 // SEP — 2024",
-    title: "Azure Community Lead",
-    company: "Reskilll | Microsoft Collaboration",
+    period: "2025 // APR — JUL",
+    title: "Strategic Development Associate",
+    company: "CKC Cares | London Area | Remote",
     isHighlighted: false,
     linkedinUrl: "https://linkedin.com/in/pavankumarmukkera",
     points: [
-      "Scaled engagement across 100+ institutions for Azure Developer Day.",
-      "Mentor for GitHub Copilot, Azure DevOps, and Gen AI skills."
+      "Architected digital engagement strategies, increasing customer touchpoints by 30%.",
+      "Managed Shopify e-commerce optimization and secured new partnership grants."
     ]
   },
   {
-    period: "2024 // JUN — PRESENT",
-    title: "Business Analyst & Consultant",
-    company: "Bizaek.com | Remote",
-    isHighlighted: false,
+    period: "2024 // OCT — PRESENT",
+    title: "Azure Developer Community Lead",
+    company: "Reskilll | Remote | Freelance",
+    isHighlighted: true,
     linkedinUrl: "https://linkedin.com/in/pavankumarmukkera",
     points: [
-      "Automated SMB workflows using Azure Logic Apps & Power BI.",
-      "Optimized operational efficiency by 30% through digital transformation."
+      "Leading technical collaborations with Microsoft Azure for global developer hubs.",
+      "Orchestrating Azure Developer Day and AI Agents in Action workshops."
     ]
   },
   {
-    period: "2024 // JAN — JUN",
-    title: "Community & GTM Consultant",
-    company: "PossoBuild | Remote",
+    period: "2021 // JUN — PRESENT",
+    title: "Founder & Community Lead",
+    company: "Technical Spaces | Remote | Self-employed",
     isHighlighted: false,
     linkedinUrl: "https://linkedin.com/in/pavankumarmukkera",
     points: [
-      "Directed GTM strategy and marketing assets for Paparizzaa UK & Home Care."
+      "Bridging the industry-academia gap for 500+ learners across India and the UK.",
+      "Directing technical teams for cloud integration and web automation projects."
+    ]
+  },
+  {
+    period: "2024 // MAY — OCT",
+    title: "Azure Developer Lead",
+    company: "Reskilll | Hyderabad | Full-time",
+    isHighlighted: false,
+    linkedinUrl: "https://linkedin.com/in/pavankumarmukkera",
+    points: [
+      "Built a Microsoft Azure community of 1,000+ members with 95% satisfaction.",
+      "Delivered 20+ hackathons and training on GenAI, Copilot, and Cloud services."
+    ]
+  },
+  {
+    period: "2023 // SEP — 2024 // MAY",
+    title: "Reskilll Inspirer",
+    company: "Reskilll | Hyderabad | Internship",
+    isHighlighted: false,
+    linkedinUrl: "https://linkedin.com/in/pavankumarmukkera",
+    points: [
+      "Recognized for outstanding contributions to the Microsoft Azure Developer Community.",
+      "Mentored peers and represented the community at high-impact technical workshops."
+    ]
+  },
+  {
+    period: "2022 // AUG — 2023 // MAY",
+    title: "US Technical Recruiter",
+    company: "APP Y SYSTEMS, Inc | Hyderabad | On-site",
+    isHighlighted: false,
+    linkedinUrl: "https://linkedin.com/in/pavankumarmukkera",
+    points: [
+      "Sourced and screened talent for Azure, DevOps, and Full-stack engineering roles.",
+      "Managed candidate pipelines across Bullhorn and Salesforce ATS systems."
+    ]
+  },
+  {
+    period: "2024 // NOV — 2025 // FEB",
+    title: "Administrative Assistant",
+    company: "Subway | Watford, UK | Part-time",
+    isHighlighted: false,
+    linkedinUrl: "https://linkedin.com/in/pavankumarmukkera",
+    points: [
+      "Optimized shift scheduling and compliance documentation for regional operations.",
+      "Managed customer engagement and resolution for digital delivery platforms."
+    ]
+  },
+  {
+    period: "2023 // JUN — 2024 // MAR",
+    title: "Technical Specialist",
+    company: "FalconAVL | Hyderabad | Internship",
+    isHighlighted: false,
+    linkedinUrl: "https://linkedin.com/in/pavankumarmukkera",
+    points: [
+      "Provided expert support and troubleshooting for complex technical operations.",
+      "Ensured optimal performance of high-scale technical systems."
+    ]
+  },
+  {
+    period: "2021 // APR — 2022 // MAR",
+    title: "Email Administrator",
+    company: "Project StepOne | Remote | Internship",
+    isHighlighted: false,
+    linkedinUrl: "https://linkedin.com/in/pavankumarmukkera",
+    points: [
+      "Managed critical communication flows for a non-profit telemedicine startup.",
+      "Leveraged technology to augment governmental resources during health crises."
+    ]
+  },
+  {
+    period: "2021 // MAR — AUG",
+    title: "Software Engineering Intern",
+    company: "NSICLTD | India | Apprenticeship",
+    isHighlighted: false,
+    linkedinUrl: "https://linkedin.com/in/pavankumarmukkera",
+    points: [
+      "Developed programming foundations in Java, Python, and Android development.",
+      "Contributed to real-time coding, testing, and debugging for SME IT solutions."
     ]
   }
 ];
@@ -102,9 +180,9 @@ const Experience = () => {
                           className="flex items-start gap-3 text-base text-muted-foreground leading-relaxed"
                         >
                           <span className="w-1.5 h-1.5 rounded-full bg-indigo-500/30 mt-2 flex-shrink-0" />
-                          {point.includes("House of YOU") || point.includes("100+") || point.includes("Azure Logic Apps") ? (
+                          {point.includes("Microsoft Azure") || point.includes("500+") || point.includes("1,000+") || point.includes("AI Agents") || point.includes("GenAI") || point.includes("Shopify") || point.includes("Azure Cloud") ? (
                             <span dangerouslySetInnerHTML={{
-                              __html: point.replace(/(House of YOU|100\+ institutions|Azure Logic Apps & Power BI)/g, '<span class="text-foreground font-semibold">$1</span>')
+                              __html: point.replace(/(Microsoft Azure|500\+|1,000\+|AI Agents|GenAI|Shopify|Azure Cloud)/g, '<span class="text-foreground font-semibold">$1</span>')
                             }} />
                           ) : point}
                         </motion.div>

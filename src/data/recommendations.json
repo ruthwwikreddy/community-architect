@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "Toby Whittington BA (Hons), MBA, FHEA, CMgr, FCMI",
+        "title": "Award Leader and Management Lecturer at BPP University",
+        "relationship": "Mentor",
+        "date": "January 10, 2026",
+        "text": "I was one of Pavan's Lecturers during his MSc Management degree at BPP University. I found Pavan to be an articulate, ambitious and hard working student, who possesses great networking and people skills, in addition to his technical abilities. He will be an asset to the right employer or project.",
+        "linkedinUrl": "https://www.linkedin.com/in/tobywhittington/"
+    },
+    {
+        "id": 2,
+        "name": "Bhushan Kapkar",
+        "title": "Senior GenAI Architect | Senior Manager GenAI/ ML | Optum (UHG)",
+        "relationship": "Worked with Pavan but on different teams",
+        "date": "January 5, 2026",
+        "text": "I highly recommend Pavan Kumar Mukkera for his structured, data-driven approach and strong sense of ownership. He brings clarity to complex problems, executes reliably, and earns trust through consistent delivery. Beyond his core work, Pavan actively contributes to the tech community, supporting learning, collaboration, and knowledge sharing. He operates with integrity, professionalism, and a genuine leadership mindset.",
+        "linkedinUrl": "https://www.linkedin.com/in/bhushankapkar/"
+    },
+    {
+        "id": 3,
+        "name": "Lakshit Pant",
+        "title": "Salesforce | Community Copilot | Creator | Ex-Microsoft",
+        "relationship": "Managed Pavan directly",
+        "date": "January 3, 2026",
+        "text": "I’ve had the opportunity to work closely with him on multiple community-related initiatives, and throughout our collaboration, he consistently demonstrated dedication, integrity, and a strong sense of ownership. He gives his whole heart to everything he takes on, what I appreciate most is his people management skills; he knows how to bring individuals together, motivate teams, and ensure everyone is aligned toward a common goal.",
+        "linkedinUrl": "https://www.linkedin.com/in/lakshitpant/"
+    },
+    {
+        "id": 4,
+        "name": "Cha'Von (CJ) Clarke-Joell",
+        "title": "AI Psychology & Root Ethics Strategist | Human-Centred AI Governance Architect",
+        "relationship": "Managed Pavan directly",
+        "date": "December 22, 2025",
+        "text": "Pavan is an enthusiastic and innovative contributor who brings energy, fresh ideas, and a collaborative spirit to the team. He is proactive in supporting others and consistently looks for ways to contribute to team and organisational growth. With his continued professional development, he will be a strong asset to any organisation seeking motivated and forward-thinking talent.",
+        "linkedinUrl": "https://www.linkedin.com/in/chavonjoell/"
+    },
+    {
+        "id": 5,
+        "name": "Rohit Sardana",
+        "title": "Theyouthtalks - A GenZ Research & Insight Platform | Reskilll",
+        "relationship": "Managed Pavan directly",
+        "date": "August 20, 2025",
+        "text": "Pavan is a powerhouse when it comes to connecting dots and making things work. He is dedicated, honest and gives his heart out to the tasks and the team. An asset for any organization he decides to work with in future.",
+        "linkedinUrl": "https://www.linkedin.com/in/sardanarohit/"
+    }
+]

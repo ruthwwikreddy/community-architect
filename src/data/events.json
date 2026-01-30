@@ -105,24 +105,42 @@
     "key": "event4",
     "highlightLabel": "Event / Training Highlight – 4",
     "eventName": "Microsoft AI Tour 2024 – Bangalore",
-    "title": "Immersive AI tour experience with Satya Nadella keynote",
-    "date": "2024",
-    "location": "Microsoft AI Tour, Bangalore, India",
+    "title": "Premier AI conference featuring Satya Nadella keynote and AI Odyssey Challenge",
+    "date": "8th February 2024",
+    "location": "Bangalore International Exhibition Centre (BIEC), Bangalore, India",
     "organizerPartner": "Microsoft | Reskilll | Azure Developer Community",
-    "role": "Participant (VIP Pass) & Community Contributor",
-    "description": "Participated in Microsoft AI Tour 2024 in Bangalore, attending keynotes and deep-dives on AI and Azure, including a keynote by Satya Nadella and AI Odyssey Challenge.",
+    "role": "VIP Pass Participant & Community Contributor",
+    "audience": "2,000+ AI professionals, developers, and tech leaders",
+    "duration": "Full day immersive conference",
+    "description": "Attended Microsoft AI Tour 2024 in Bangalore with VIP access, experiencing keynote presentations including Satya Nadella's vision for AI, technical deep-dives on Azure AI services, hands-on workshops, and participated in the Microsoft AI Odyssey Challenge. This flagship event showcased Microsoft's latest AI innovations and strategic direction for AI-powered solutions.",
     "keyThemes": [
-      "Future of AI",
-      "Azure AI Services",
+      "Future of AI and Microsoft's AI vision",
+      "Azure AI Services and capabilities",
       "AI in enterprise solutions",
-      "Developer opportunities"
+      "Developer opportunities with AI",
+      "Responsible AI and ethics"
     ],
-    "myContribution": "Represented Azure Developer Community, actively took part in workshops, networking, and AI Odyssey Challenge, and brought learnings back to the community.",
+    "keyTopics": [
+      "Satya Nadella's AI vision keynote",
+      "Azure OpenAI Service",
+      "Microsoft 365 Copilot",
+      "AI Odyssey Challenge",
+      "Generative AI applications",
+      "AI adoption strategies"
+    ],
+    "speakers": [
+      "Satya Nadella (CEO, Microsoft)",
+      "Microsoft AI leadership team",
+      "Azure AI product experts"
+    ],
+    "myContribution": "Actively participated as Azure Developer Community representative with VIP pass access, engaged in technical workshops and AI Odyssey Challenge, networked with Microsoft AI experts and industry leaders, absorbed cutting-edge AI knowledge, and documented learnings to share with the broader developer community through Reskilll and ADC platforms.",
     "impact": [
-      "Gained exclusive insights into Microsoft's AI vision from leadership.",
-      "Strengthened AI technical skills through real-world challenge formats.",
-      "Expanded professional network with industry leaders and Microsoft experts.",
-      "Enhanced ability to bring AI knowledge into community training sessions."
+      "Gained exclusive first-hand insights into Microsoft's AI strategy and product roadmap directly from Satya Nadella and leadership team.",
+      "Strengthened technical expertise in Azure AI services through hands-on workshops and challenge participation.",
+      "Expanded professional network with 2,000+ AI professionals, Microsoft experts, and technology leaders.",
+      "Enhanced ability to evangelize AI technologies and bring practical AI knowledge into community training sessions and workshops.",
+      "Represented Azure Developer Community at Microsoft's flagship AI event, strengthening organizational credibility.",
+      "Acquired deep understanding of enterprise AI adoption patterns and real-world AI implementation strategies."
     ],
     "images": [
       "/portfolio_assets/event4/Event1_CMR_College_4.jpeg",
@@ -551,30 +569,41 @@
     "key": "event17",
     "highlightLabel": "Event / Training Highlight – 17",
     "eventName": "Azure Developer Day – GRIET Hyderabad",
-    "title": "Virtual Azure Developer Day coordinated from the UK",
+    "title": "Large-scale Azure Developer Day coordinated virtually from United Kingdom",
     "date": "21st February 2025",
-    "location": "GRIET, Hyderabad (organized virtually from UK)",
-    "organizerPartner": "Microsoft Azure | Reskilll | Azure Developer Community",
-    "role": "Student Representative & Virtual Organizer",
-    "audience": "250+ students, faculty, and developers",
-    "description": "Organized Azure Developer Day at GRIET as a student representative while coordinating virtually from the UK, focusing on Azure, AI, and Copilot.",
+    "location": "GRIET, Hyderabad (organized virtually from United Kingdom)",
+    "organizerPartner": "Microsoft Azure | Reskilll | Azure Developer Community | GRIET SDC-SB Chapter",
+    "role": "Student Representative & Virtual Event Organizer",
+    "audience": "300+ students, faculty members, and developers",
+    "duration": "Full day technical event",
+    "description": "Successfully organized and coordinated Azure Developer Day at GRIET as a student representative while managing all logistics virtually from the United Kingdom. The event featured comprehensive sessions on Azure cloud services, AI tools, GitHub Copilot, and professional development for students, demonstrating advanced virtual event management and international coordination capabilities.",
     "keyThemes": [
-      "Azure AI",
-      "Copilots",
-      "Cloud computing",
+      "Azure AI and cloud services",
+      "GitHub Copilot and developer tools",
+      "Cloud computing for students",
+      "International virtual event coordination",
       "Networking and professional growth"
+    ],
+    "keyTopics": [
+      "Azure cloud platform and services",
+      "AI integration with Azure",
+      "GitHub Copilot for productivity",
+      "Student developer resources",
+      "Career pathways in cloud computing"
     ],
     "speakers": [
       "Nethra K",
       "Ankita Singh",
       "Shravya Bandaru"
     ],
-    "myContribution": "Coordinated the event remotely via GRIET's SDC-SB chapter, managed engagement, collaborated with speakers, and represented ADC and Reskilll.",
+    "myContribution": "Coordinated entire event remotely from the UK via GRIET's SDC-SB (Student Developer Community - Student Branch) chapter, managed international logistics and speaker coordination across time zones, collaborated with Microsoft speakers and GRIET faculty, facilitated student engagement and Q&A sessions, represented Azure Developer Community and Reskilll globally, and ensured seamless execution despite geographical distance.",
     "impact": [
-      "Showcased ability to coordinate international events virtually.",
-      "Strengthened ties between GRIET, Microsoft Azure, Reskilll, and ADC.",
-      "Empowered students with hands-on Azure learning and industry exposure.",
-      "Reinforced role as global student representative and community builder."
+      "Successfully coordinated a 300+ participant technical event across continents, showcasing international event management skills.",
+      "Strengthened strategic ties between GRIET, Microsoft Azure, Reskilll platform, and Azure Developer Community.",
+      "Empowered students with hands-on Azure learning, GitHub Copilot training, and valuable industry exposure.",
+      "Demonstrated ability to lead large-scale events virtually with professional execution and engagement.",
+      "Enhanced GRIET's SDC-SB chapter visibility and established model for international student-led initiatives.",
+      "Reinforced role as global student representative and international community builder."
     ],
     "images": [
       "/portfolio_assets/event17/image51.jpeg",
@@ -623,30 +652,41 @@
     "key": "event19",
     "highlightLabel": "Event / Training Highlight – 19",
     "eventName": "AI Dev Camp – KLH Hyderabad",
-    "title": "AI Dev Camp on AI, ML, and DL coordinated virtually",
-    "date": "04/04/2025",
-    "location": "KLH (Hyderabad, India) – Coordinated virtually from UK",
+    "title": "Intensive AI, ML, and Deep Learning bootcamp coordinated virtually from UK",
+    "date": "4th April 2025",
+    "location": "KL University (Hyderabad, India) – Coordinated virtually from UK",
     "organizerPartner": "Microsoft | Reskilll | Azure Developer Community",
-    "role": "Virtual Coordinator & Lead",
-    "audience": "200+ participants (students, developers, AI enthusiasts)",
-    "description": "Served as Virtual Coordinator & Lead for AI Dev Camp at KLH, focused on AI, ML, DL, and Azure AI applications through hands-on projects and training.",
+    "role": "Virtual Event Coordinator & Lead",
+    "audience": "250+ participants (students, developers, AI enthusiasts, faculty)",
+    "duration": "Full day intensive bootcamp",
+    "description": "Coordinated and led a comprehensive AI Dev Camp at KLH from the UK, featuring intensive hands-on training in Artificial Intelligence, Machine Learning, and Deep Learning with practical Azure AI applications. The bootcamp focused on building future-ready developer skills through real-world projects and industry expert guidance.",
     "keyThemes": [
       "Artificial Intelligence",
       "Machine Learning",
       "Deep Learning",
       "Azure AI applications",
-      "Future-ready developer skills"
+      "Future-ready developer skills",
+      "Hands-on project development"
+    ],
+    "keyTopics": [
+      "AI/ML fundamentals and advanced concepts",
+      "Deep Learning architectures and applications",
+      "Azure AI Studio and cognitive services",
+      "Real-world AI project implementation",
+      "Industry best practices in AI development"
     ],
     "speakers": [
       "Purushotham Chanda (PC)",
       "Satya Addala"
     ],
-    "myContribution": "Coordinated the event virtually from the UK, managed community engagement, supported speaker sessions, and represented Reskilll and ADC.",
+    "myContribution": "Led complete virtual coordination from the UK, managed speaker sessions and technical content delivery, facilitated participant engagement across time zones, represented Reskilll and Azure Developer Community, drove community building initiatives, and ensured seamless execution of hands-on labs and Q&A sessions.",
     "impact": [
-      "Strengthened AI skill development at KLH.",
-      "Showcased ability to lead large-scale events virtually across borders.",
-      "Reinforced collaboration between Microsoft experts, Reskilll, and ADC.",
-      "Inspired participants to pursue AI-driven innovation and careers."
+      "Successfully trained 250+ participants in AI, ML, and DL from across borders via virtual coordination.",
+      "Demonstrated exceptional ability to lead large-scale technical bootcamps remotely across different time zones.",
+      "Strengthened AI skill development at KLH through hands-on, project-based learning approach.",
+      "Enhanced collaboration between Microsoft AI experts, Reskilll platform, and Azure Developer Community.",
+      "Inspired participants to pursue AI-driven innovation, research, and industry careers.",
+      "Established model for effective virtual event coordination and international community leadership."
     ],
     "images": [
       "/portfolio_assets/event19/image57.jpeg",
@@ -690,33 +730,47 @@
     "key": "event21",
     "highlightLabel": "Event / Training Highlight – 21",
     "eventName": "GitHub Copilot Event – Microsoft Campus Hyderabad",
-    "title": "GitHub Copilot event with TheYouthTalks initiative showcase",
-    "date": "June 2025",
+    "title": "GitHub Copilot event with TheYouthTalks initiative showcase and Gen Z engagement",
+    "date": "14th June 2025",
     "location": "Microsoft Campus, Hyderabad",
     "organizerPartner": "Microsoft | Reskilll | Azure Developer Community | Swamy's Tech Skills Academy | P. R. Pote Patil Group of Educational Institutes",
-    "role": "Speaker, Coordinator & Initiative Presenter",
-    "audience": "200+ developers, students, and community members",
-    "description": "Served as speaker and coordinator for a GitHub Copilot event that combined technical sessions with the launch and promotion of TheYouthTalks initiative for Gen Z.",
+    "role": "Speaker, Event Coordinator & TheYouthTalks Initiative Presenter",
+    "audience": "250+ developers, students, educators, and community leaders",
+    "duration": "Full day event",
+    "description": "Led and coordinated a comprehensive GitHub Copilot event at Microsoft Campus Hyderabad, featuring hands-on technical sessions on AI-powered development tools alongside the official launch and showcase of TheYouthTalks initiative - a Gen Z empowerment platform focused on innovation, skill development, and community building.",
     "keyThemes": [
       "GitHub Copilot",
       "AI-driven developer productivity",
-      "Youth empowerment through TheYouthTalks"
+      "Youth empowerment through TheYouthTalks",
+      "Gen Z innovation and engagement",
+      "Community-driven learning"
+    ],
+    "keyTopics": [
+      "GitHub Copilot for AI-assisted coding",
+      "Developer productivity tools",
+      "TheYouthTalks platform and mission",
+      "Gen Z skills development",
+      "Community hackathons and surveys"
+    ],
+    "speakers": [
+      "Shalini Singh",
+      "Viswanatha Swamy (Swamy's Tech Skills Academy)",
+      "Rohit Sardana",
+      "Azkar Uddin Khan"
     ],
     "contributors": [
-      "Shalini Singh",
-      "Viswanatha Swamy and Swamy's Tech Skills Academy team",
-      "Rohit Sardana",
-      "Azkar Uddin Khan",
       "Deekshith Bondhugula",
       "Karthikeya Reddy",
-      "P. R. Pote Patil Group of Educational Institutes"
+      "P. R. Pote Patil Group of Educational Institutes team"
     ],
-    "myContribution": "Coordinated event activities, delivered a presentation, introduced and promoted TheYouthTalks initiative, and facilitated surveys, hackathon outreach, and community engagement.",
+    "myContribution": "Coordinated end-to-end event logistics, delivered keynote presentation on GitHub Copilot, officially launched and presented TheYouthTalks initiative showcasing its mission to empower Gen Z through technology and innovation, facilitated interactive surveys and hackathon announcements, managed speaker coordination, and drove community engagement across multiple stakeholder groups.",
     "impact": [
-      "Showcased GitHub Copilot and AI tools to a diverse developer community.",
-      "Launched and promoted TheYouthTalks initiative engaging Gen Z in innovation.",
-      "Received felicitation for contributions to community building.",
-      "Strengthened collaboration between Microsoft, Reskilll, ADC, and educational institutions."
+      "Successfully showcased GitHub Copilot capabilities to 250+ developers and students, driving AI adoption in coding workflows.",
+      "Officially launched TheYouthTalks initiative with strong community response and engagement from Gen Z participants.",
+      "Received formal felicitation from Microsoft and partner organizations for outstanding contributions to community building and youth empowerment.",
+      "Strengthened strategic collaboration between Microsoft, Reskilll, Azure Developer Community, educational institutions, and tech academies.",
+      "Generated significant interest in upcoming hackathons and community-driven innovation programs.",
+      "Established TheYouthTalks as a recognized platform for Gen Z skill development and career advancement."
     ],
     "images": [
       "/portfolio_assets/event21/image63.jpeg",
