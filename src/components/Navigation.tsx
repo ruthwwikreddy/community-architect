@@ -21,12 +21,12 @@ const Navigation = () => {
 
   const NavLinks = () => (
     <>
-      <a href={isHome ? "#experience" : "/#experience"} className="hover:text-foreground transition-colors">Experience</a>
-      <a href={isHome ? "#stack" : "/#stack"} className="hover:text-foreground transition-colors">Stack</a>
-      <a href={isHome ? "#work" : "/#work"} className="hover:text-foreground transition-colors">Work</a>
-      <a href={isHome ? "#founders-preview" : "/founders"} className="hover:text-foreground transition-colors">Founders</a>
-      <a href={isHome ? "#events" : "/#events"} className="hover:text-foreground transition-colors">Events</a>
-      <a href={isHome ? "#recommendations" : "/#recommendations"} className="hover:text-foreground transition-colors">Recommendations</a>
+      <a href={isHome ? "#experience" : "/#experience"} className="hover:text-indigo-500 transition-colors uppercase">Experience</a>
+      <a href={isHome ? "#stack" : "/#stack"} className="hover:text-indigo-500 transition-colors uppercase">Stack</a>
+      <a href={isHome ? "#work" : "/#work"} className="hover:text-indigo-500 transition-colors uppercase">Work</a>
+      <Link to="/founders" className="hover:text-indigo-500 transition-colors uppercase">Founders</Link>
+      <a href={isHome ? "#events" : "/#events"} className="hover:text-indigo-500 transition-colors uppercase">Events</a>
+      <a href={isHome ? "#recommendations" : "/#recommendations"} className="hover:text-indigo-500 transition-colors uppercase">Recommendations</a>
     </>
   );
 
@@ -49,7 +49,7 @@ const Navigation = () => {
           <ThemeToggle />
 
           <a
-            href="#contact-form"
+            href={isHome ? "#contact-form" : "/#contact-form"}
             className="hidden sm:block bg-foreground text-background px-5 py-2 rounded-full text-xs font-bold uppercase hover:bg-indigo-500 hover:text-foreground transition-all"
           >
             Inquire
@@ -68,7 +68,7 @@ const Navigation = () => {
       {isMenuOpen && (
         <div className="lg:hidden mt-2 nav-glass rounded-2xl p-6 flex flex-col gap-4 text-sm mono uppercase tracking-widest">
           <NavLinks />
-          <a href="#contact-form" className="text-indigo-500" onClick={() => setIsMenuOpen(false)}>Contact</a>
+          <a href={isHome ? "#contact-form" : "/#contact-form"} className="text-indigo-500" onClick={() => setIsMenuOpen(false)}>Contact</a>
         </div>
       )}
     </nav>
